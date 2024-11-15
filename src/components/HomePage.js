@@ -1,7 +1,11 @@
 import React from 'react'
 import './HomePage.css';
 import macbookImage from '../assets/macbook.png';
+import buyingbusiness from '../assets/buying-business-2.png';
 import { motion } from 'framer-motion';
+import sellers from '../assets/sellers.png';
+
+import amazon from '../assets/amazon-associates.svg';
 
 const HomePage = () => {
 
@@ -71,6 +75,14 @@ const HomePage = () => {
       link: "/listing/81084"
     },
   ];
+
+
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    alert('Thank you for subscribing!');
+    // Here you can add logic to send the email to your backend or email service
+  };
 
   return (
 
@@ -145,6 +157,141 @@ const HomePage = () => {
 </div>
 
 
+
+
+
+
+<div className="subscription-section">
+      <h2>We Publish New Businesses Every Monday</h2>
+      <p>Enter your email below to be the first "In the Know"</p>
+      <form className="subscription-form" onSubmit={handleSubscribe}>
+        <input 
+          type="email" 
+          placeholder="Enter your email" 
+          className="subscription-input" 
+          required
+        />
+        <button type="submit" className="subscription-button">Get Notify</button>
+      </form>
+    </div>
+
+
+
+
+
+
+
+
+    <section className="how-it-works">
+  <div className="how-it-works-content">
+    <div className="image-column">
+      <img src={buyingbusiness}  alt="How It Works" className="how-it-works-image" />
+    </div>
+    <div className="text-column">
+      <h2>How It Works</h2>
+      <h3>Buying a Business</h3>
+      <p>
+        Visit our marketplace to find profitable online businesses for sale. From passive
+        investments to more involved assets, we’ve got them all.
+      </p>
+      <p>
+        See an online business or website you like? Unlock the listing for access to
+        everything you need to review your potential purchase: URL, Google Analytics, Profit & Loss
+        Statement, etc.
+      </p>
+      <a href="/how-to-buy" className="how-to-buy-button">How to Buy a Business</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section className="how-it-works-sell">
+  <div className="how-it-works-content">
+    <div className="text-column">
+      <h2>How It Works</h2>
+      <h3>Selling Your Business</h3>
+      <p>
+        Sell your website or online business hassle-free. We hold your hand through the process, 
+        step-by-step, and weed out non-serious buyers. We even transfer the business to the buyer 
+        so you don’t have to.
+      </p>
+      <p>
+        You make more money with us than if you sell on your own. You don’t need to buy software. 
+        You don’t need to contact your web host. We do it all on your behalf.
+      </p>
+      <a href="/how-to-sell" className="how-to-sell-button">How to Sell a Business</a>
+    </div>
+    <div className="image-column">
+      <img src={sellers} alt="Selling Your Business" className="how-it-works-image" />
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section className="popular-monetizations">
+  <div className="monetizations-header">
+    <h2>Popular Monetizations</h2>
+    <p>
+      Explore an exclusive selection of established online businesses for sale 
+      by selecting a category you are interested in below.
+    </p>
+  </div>
+  <div className="monetizations-grid">
+    <div className="monetization-card">
+      <img src={amazon} alt="Amazon Associates" />
+      <h3>Amazon Associates</h3>
+      <p>15 Listings</p>
+    </div>
+    <div className="monetization-card">
+      <img src={amazon} alt="Amazon FBA" />
+      <h3>Amazon FBA</h3>
+      <p>70 Listings</p>
+    </div>
+    <div className="monetization-card">
+      <img src={amazon} alt="Amazon FBM" />
+      <h3>Amazon FBM</h3>
+      <p>3 Listings</p>
+    </div>
+    <div className="monetization-card">
+      <img src={amazon} alt="Amazon KDP" />
+      <h3>Amazon KDP</h3>
+      <p>9 Listings</p>
+    </div>
+    <div className="monetization-card">
+      <img src={amazon} alt="Amazon Merch" />
+      <h3>Amazon Merch</h3>
+      <p>2 Listings</p>
+    </div>
+    <div className="monetization-card">
+      <img src={amazon} alt="Display Advertising" />
+      <h3>Display Advertising</h3>
+      <p>36 Listings</p>
+    </div>
+    <div className="monetization-card">
+      <img src={amazon} alt="DropShipping" />
+      <h3>DropShipping</h3>
+      <p>10 Listings</p>
+    </div>
+    <div className="monetization-card">
+      <img src={amazon} alt="eCommerce" />
+      <h3>eCommerce</h3>
+      <p>28 Listings</p>
+    </div>
+  </div>
+</section>
 
 
     </>
